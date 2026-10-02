@@ -17,7 +17,8 @@
     "db:init": "psql -U postgres -d automation_db -f ../database-schema.sql",
     "test": "jest",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test:kafka": "node --test confluent-client.test.mjs github-events.publisher.test.mjs"
   },
   "keywords": [
     "automation",
@@ -45,7 +46,7 @@
     "winston": "^3.8.0",
     "socket.io": "^4.6.0",
     "bull": "^4.11.0",
-    "temporal-sdk": "^1.8.0"
+    "kafkajs": "^2.2.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",
